@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="line">
+
+    <stroke android:width="@dimen/player_bottom_seek_line_h" android:color="@color/player_seek_sec_progress"  />
+
+</shape>

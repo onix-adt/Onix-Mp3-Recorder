@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_item_sort_duration"
+        android:title="@string/menu_duration"/>
+
+    <item
+        android:id="@+id/menu_item_sort_alphabetical"
+        android:title="@string/menu_alphabetical"/>
+
+    <item
+        android:id="@+id/menu_item_sort_date"
+        android:title="@string/menu_date"/>
+
+
+</menu>

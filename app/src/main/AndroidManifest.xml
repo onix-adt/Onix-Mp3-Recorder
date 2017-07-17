@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.onix.recorder.lame">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <activity android:name=".activity.LaunchActivity"
+                  android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".activity.MainActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.SettingsActivity"
+                  android:screenOrientation="portrait"/>
+
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="audiorecords.db"/>
+
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="1"/>
+
+        <receiver
+            android:name=".views.WidgetRecorder"
+            android:icon="@drawable/ic_widget_preview"
+            android:label="@string/app_name">
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="ACTION_LISTENER_RECORDING_ONSTART"/>
+                <action android:name="ACTION_LISTENER_RECORDING_ONSTOP"/>
+                <action android:name="ACTION_UPDATE"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_recorder_metadata">
+            </meta-data>
+
+        </receiver>
+
+        <service
+            android:name=".components.recording.RecordService"
+            android:exported="false"/>
+
+        <service
+            android:name="com.onix.recorder.lame.components.audio.MediaPlayerService"
+            android:exported="false"/>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="1d532a1457f36b69c7b215806ebb9255fd36dd76"/>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>

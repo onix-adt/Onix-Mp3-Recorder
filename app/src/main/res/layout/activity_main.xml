@@ -1,0 +1,155 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <data>
+        <import type="android.view.View"/>
+        <variable name="handler" type="com.onix.recorder.lame.activity.MainActivity"/>
+    </data>
+
+    <FrameLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white">
+
+
+        <com.onix.recorder.lame.views.InterceptRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{handler.showPermissionError ? View.VISIBLE : View.VISIBLE}">
+
+            <RelativeLayout
+                android:id="@+id/rlActionbarContainer"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/color_main_purple"
+                android:elevation="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toLeftOf="@+id/ivSearch"
+                    android:text="@string/app_name"
+                    android:textColor="@color/color_white"
+                    android:textSize="17sp"
+                    android:visibility="@{handler.isSearchMode ? View.GONE : View.VISIBLE}"/>
+
+                <EditText
+                    android:id="@+id/edtSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toLeftOf="@+id/ivClose"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/hint_search"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_white"
+                    android:textCursorDrawable="@drawable/shape_cursor_actionbar"
+                    android:visibility="@{handler.isSearchMode ? View.VISIBLE : View.GONE}"/>
+
+                <ImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_toLeftOf="@+id/ivSearch"
+                    android:background="@drawable/sel_btn_actionbar"
+                    android:onClick="@{() -> handler.onClick(ivClose)}"
+                    android:padding="@dimen/actionbar_btn_back_padding"
+                    android:scaleType="fitXY"
+                    android:visibility="@{handler.isSearchMode ? View.VISIBLE : View.GONE}"
+                    app:srcCompat="@drawable/ic_close"/>
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_toLeftOf="@+id/ivSort"
+                    android:background="@drawable/sel_btn_actionbar"
+                    android:onClick="@{() -> handler.onClick(ivSearch)}"
+                    android:padding="@dimen/actionbar_btn_back_padding"
+                    android:scaleType="fitXY"
+                    android:visibility="@{handler.isSearchMode ? View.GONE : View.VISIBLE}"
+                    app:srcCompat="@drawable/ic_search"/>
+
+                <ImageView
+                    android:id="@+id/ivSort"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_toLeftOf="@+id/ivSettings"
+                    android:background="@drawable/sel_btn_actionbar"
+                    android:onClick="@{() -> handler.onClick(ivSort)}"
+                    android:padding="@dimen/actionbar_btn_back_padding"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_sort"/>
+
+                <ImageView
+                    android:id="@+id/ivSettings"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/sel_btn_actionbar"
+                    android:onClick="@{() -> handler.onClick(ivSettings)}"
+                    android:padding="@dimen/actionbar_btn_back_padding"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_settings"/>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/rlPlayerContainer"
+                android:layout_below="@+id/rlActionbarContainer">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvRecords"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+
+                <ImageView
+                    android:id="@+id/btnOpenRecordDialog"
+                    android:layout_width="@dimen/btn_fab_record"
+                    android:layout_height="@dimen/btn_fab_record"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right|bottom"
+                    android:layout_margin="@dimen/btn_fab_record_margin"
+                    android:background="@drawable/sel_btn_fab_record"
+                    android:elevation="4dp"
+                    android:onClick="@{() -> handler.onClick(btnOpenRecordDialog)}"
+                    android:padding="12dp"
+                    android:tint="@android:color/white"
+                    app:srcCompat="@drawable/ic_manual_record"/>
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlPlayerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:clickable="true"
+                android:visibility="@{handler.showPlayer ? View.VISIBLE : View.GONE}"/>
+
+        </com.onix.recorder.lame.views.InterceptRelativeLayout>
+
+        <TextView
+            android:id="@+id/tvPermissionsError"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ccffaaaa"
+            android:gravity="center"
+            android:onClick="@{() -> handler.onClick(tvPermissionsError)}"
+            android:text="@string/error_permissions"
+            android:textColor="@color/color_main_title"
+            android:textSize="@dimen/error_permission_textsize"
+            android:visibility="@{handler.showPermissionError ? View.VISIBLE : View.GONE}"/>
+
+    </FrameLayout>
+</layout>

@@ -1,0 +1,52 @@
+<resources>
+
+    <string name="app_name">Onix Mp3 Recorder</string>
+    <string name="settings">Настройки</string>
+
+    <string name="error_recording">Ошибка записи</string>
+    <string name="error_permissions">Необходимо разрешить доступ к памяти</string>
+
+    <string name="start_record">Начать запись</string>
+    <string name="stop_record">Остановить запись</string>
+    <string name="choose_path">Выберить путь</string>
+    <string name="settings_saving_path">Выберите путь сохранения</string>
+    <string name="settings_setup_id3tags_title">Установить ID3 тэги</string>
+    <string name="settings_setup_id3tags_subtitle">Изменить ID3 тэги записи</string>
+    <string name="settings_bitrate">Битрейт</string>
+    <string name="settings_embedded_player">Использовать внутренний плеер</string>
+
+    <string name="menu_play">Воспроизвести</string>
+    <string name="menu_delete">Удалить</string>
+    <string name="menu_share">Поделиться</string>
+    <string name="menu_rename">Переименовать</string>
+    <string name="menu_duration">По длительности</string>
+    <string name="menu_alphabetical">По имени</string>
+    <string name="menu_date">По дате</string>
+
+    <string name="hint_record_file_name">Введите имя файла</string>
+    <string name="hint_id3tag_title">Название</string>
+    <string name="hint_id3tag_artist">Артист</string>
+    <string name="hint_id3tag_year">Год</string>
+    <string name="hint_id3tag_comment">Комментарий</string>
+    <string name="hint_search">Поиск</string>
+
+    <string name="dialog_ok">Готово</string>
+    <string name="dialog_cancel">Отмена</string>
+    <string name="dialog_bitrate_title">Выберите битрейт</string>
+
+    <string name="id3_tags_default_title">Аудиозапись</string>
+    <string name="id3_tags_default_artist">LameEncoder</string>
+
+    <string name="permission_message_storage">Приложению необходимо разрешение на доступ к памяти </string>
+
+    <string name="record_time">Время записи: %s</string>
+    <string name="record_time_default">Время записи: 00:00</string>
+    <string name="loading">Идёт загрузка...</string>
+    <string name="recording">Идёт запись…</string>
+    <string name="settings_powered_by_lame">This project use Lame encoder.</string>
+    <string name="settings_powered_by_lame_url">http://lame.sourceforge.net/</string>
+    <string name="settings_powered_by_onix">Powered by Onix!</string>
+    <string name="settings_powered_by_onix_url">https://onix-systems.com/</string>
+    <string name="error_no_external_player">Плеер не найден, используем встроенный.</string>
+
+</resources>

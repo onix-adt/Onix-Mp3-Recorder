@@ -1,0 +1,113 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable name="handler" type="com.onix.recorder.lame.dialog.Id3TagsDialog"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/lrDialogRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:theme="@style/RecordInputLayoutTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_id3tag_title">
+
+            <EditText
+                style="@style/RecordEditTextTheme"
+                android:id="@+id/edtTitle"
+                android:layout_centerHorizontal="true"
+                android:singleLine="true"
+                android:text="@={handler.titleObservable}"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:theme="@style/RecordInputLayoutTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_id3tag_artist">
+
+            <EditText
+                android:id="@+id/edtArtist"
+                android:singleLine="true"
+                android:text="@={handler.artistObservable}"
+                style="@style/RecordEditTextTheme"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:theme="@style/RecordInputLayoutTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_id3tag_year">
+
+            <EditText
+                android:id="@+id/edtYear"
+                android:singleLine="true"
+                android:text="@={handler.yearObservable}"
+                style="@style/RecordEditTextTheme"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:theme="@style/RecordInputLayoutTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_id3tag_comment">
+
+            <EditText
+                android:id="@+id/edtComment"
+                android:singleLine="true"
+                android:text="@={handler.commentObservable}"
+                style="@style/RecordEditTextTheme"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvOk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/sel_btn_dialog"
+                android:onClick="@{() -> handler.onClick(tvOk)}"
+                android:paddingBottom="@dimen/dialog_btn_padding_top_bottom"
+                android:paddingLeft="@dimen/dialog_btn_padding_left_right"
+                android:paddingRight="@dimen/dialog_btn_padding_left_right"
+                android:paddingTop="@dimen/dialog_btn_padding_top_bottom"
+                android:text="@string/dialog_ok"
+                android:textColor="@color/color_red"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tvCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sel_btn_dialog"
+                android:onClick="@{() -> handler.onClick(tvCancel)}"
+                android:paddingBottom="@dimen/dialog_btn_padding_top_bottom"
+                android:paddingLeft="@dimen/dialog_btn_padding_left_right"
+                android:paddingRight="@dimen/dialog_btn_padding_left_right"
+                android:paddingTop="@dimen/dialog_btn_padding_top_bottom"
+                android:text="@string/dialog_cancel"
+                android:textColor="@color/color_red"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

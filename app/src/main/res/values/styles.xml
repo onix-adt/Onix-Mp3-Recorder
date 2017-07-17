@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="RecordInputLayoutTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="colorControlNormal">@color/color_main_purple_inactive</item>
+        <item name="colorControlActivated">@color/color_main_purple</item>
+        <item name="android:textColorPrimary">@color/color_main_purple</item>
+        <item name="android:textColorHint">@color/color_main_purple_inactive</item>
+    </style>
+
+    <style name="RecordEditTextTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:textCursorDrawable">@drawable/shape_cursor_record</item>
+        <item name="android:singleLine">false</item>
+        <item name="colorControlNormal">@color/color_main_purple_inactive</item>
+        <item name="colorControlActivated">@color/color_main_purple</item>
+        <item name="android:textColorPrimary">@color/color_main_purple</item>
+        <item name="android:textColorHint">@color/color_main_purple_inactive</item>
+        <item name="android:textColor">@color/color_main_purple</item>
+        <item name="android:textSize">@dimen/dialog_recording_inputfield_textsize</item>
+    </style>
+
+    <style name="RecordEditText">
+        <item name="android:theme">@style/RecordEditTextTheme</item>
+        <item name="android:paddingTop">4dp</item>
+    </style>
+
+    <style name="Theme.RecordDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+</resources>

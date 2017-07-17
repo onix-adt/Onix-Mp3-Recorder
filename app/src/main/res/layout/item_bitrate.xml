@@ -1,0 +1,53 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable name="item" type="com.onix.recorder.lame.enums.Bitrate"/>
+        <variable name="handler" type="com.onix.recorder.lame.adapters.BitrateAdapter"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sel_item_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/item_bitrate_padding_left_right"
+            android:paddingRight="@dimen/item_bitrate_padding_left_right">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/ivCheckmark"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/item_bitrate_padding_top_bottom"
+                android:paddingTop="@dimen/item_bitrate_padding_top_bottom"
+                android:singleLine="true"
+                android:text="@{item.getBitrate()}"
+                android:textColor="@color/color_main_title"
+                android:textSize="@dimen/item_track_title_textsize"/>
+
+            <ImageView
+                android:id="@+id/ivCheckmark"
+                android:layout_width="@dimen/item_bitrate_checkmark"
+                android:layout_height="@dimen/item_bitrate_checkmark"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="@{item.isSelected ? View.VISIBLE : View.GONE}"
+                app:srcCompat="@drawable/ic_checkmark_black"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_track_divider_height"
+            android:layout_gravity="bottom"
+            android:background="@color/color_main_divider"/>
+
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_settings_height">70dp</dimen>
+    <dimen name="item_settings_padding_left_right">16dp</dimen>
+
+    <dimen name="error_permission_textsize">20sp</dimen>
+
+    <dimen name="actionbar_btn_back_padding">17dp</dimen>
+    <dimen name="btn_fab_record">50dp</dimen>
+    <dimen name="btn_fab_record_margin">25dp</dimen>
+
+    <dimen name="btn_fab_mic_size">60dp</dimen>
+
+    // DIALOG RECORD
+    <dimen name="dialog_btn_padding_left_right">20dp</dimen>
+    <dimen name="dialog_btn_padding_top_bottom">8dp</dimen>
+    <dimen name="dialog_recording_inputfield_textsize">18sp</dimen>
+
+    <dimen name="item_track_btn_more_size">50dp</dimen>
+    <dimen name="item_track_btn_more_padding">12dp</dimen>
+    <dimen name="item_track_duration_margin_right">8dp</dimen>
+    <dimen name="item_track_duration_textsize">13sp</dimen>
+    <dimen name="item_track_title_textsize">15sp</dimen>
+    <dimen name="item_track_padding_left_right">16dp</dimen>
+    <dimen name="item_track_padding_top_bottom">12dp</dimen>
+    <dimen name="item_track_height">75dp</dimen>
+    <dimen name="item_track_divider_height">1px</dimen>
+
+    <dimen name="item_bitrate_padding_top_bottom">16dp</dimen>
+    <dimen name="item_bitrate_padding_left_right">16dp</dimen>
+    <dimen name="item_bitrate_checkmark">20dp</dimen>
+
+    // WIDGET
+    <dimen name="widget_width">40dp</dimen>
+    <dimen name="widget_height">40dp</dimen>
+    <dimen name="widget_btn_record_size">40dp</dimen>
+    <dimen name="widget_btn_microphone_padding">4dp</dimen>
+    <dimen name="widget_textsize">16sp</dimen>
+
+    <dimen name="dialog_base_singleselection_btn_close_size">40dp</dimen>
+    <dimen name="dialog_base_singleselection_btn_close_padding">6dp</dimen>
+    <dimen name="dialog_base_singleselection_title_textsize">16sp</dimen>
+    <dimen name="dialog_base_singleselection_title_padding_left">16dp</dimen>
+    <dimen name="dialog_base_singleselection_title_padding_top_bottom">6dp</dimen>
+    <dimen name="dialog_base_singleselection_item_padding_top_bottom">10dp</dimen>
+
+    <dimen name="player_bottom_bar_height">65dp</dimen>
+    <dimen name="player_bottom_seek_line_h">6dp</dimen>
+
+    <dimen name="notification_recording_padding_top_bottom">8dp</dimen>
+    <dimen name="notification_recording_icon_stop_recording">60dp</dimen>
+    <dimen name="notification_recording_margin_right">10dp</dimen>
+
+</resources>

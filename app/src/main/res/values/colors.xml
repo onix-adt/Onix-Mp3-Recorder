@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1a1624</color>
+    <color name="colorPrimaryDark">#1a1624</color>
+    <color name="colorAccent">#93161724</color>
+
+    <color name="color_main_purple">#1a1624</color>
+    <color name="color_main_purple_inactive">#511a1624</color>
+    <color name="color_main_divider">#511a1624</color>
+    <color name="color_actionbar_back_sel">#87ffffff</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+    <color name="color_white_sel">#dfdfdf</color>
+    <color name="color_red">#d40000</color>
+
+    <color name="color_main_title">#1a1624</color>
+    <color name="color_main_subtitle">#871a1624</color>
+    <color name="color_main_url">#015acf</color>
+    <color name="color_track_duration">#aeaeae</color>
+
+    <color name="player_seek_thumb">#000000</color>
+    <color name="player_seek_progress">#FF000000</color>
+    <color name="player_seek_sec_progress">#41002aff</color>
+    <color name="player_seek_back">#41000000</color>
+    <color name="player_back">#dfdfdf</color>
+
+</resources>

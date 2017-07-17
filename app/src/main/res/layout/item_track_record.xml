@@ -1,0 +1,96 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="record" type="com.onix.recorder.lame.data.model.TrackRecord"/>
+        <variable name="handler" type="com.onix.recorder.lame.adapters.TrackRecordAdapter"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/frameRootContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/sel_item_white"
+            android:onClick="@{() -> handler.onClick(frameRootContent, record)}"
+            android:paddingBottom="@dimen/item_track_padding_top_bottom"
+            android:paddingTop="@dimen/item_track_padding_top_bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ivMore"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/item_track_padding_left_right"
+                android:paddingRight="@dimen/item_track_padding_left_right">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@{record.fileName}"
+                    android:textColor="@color/color_main_title"
+                    android:textSize="@dimen/item_track_title_textsize"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@{record.realFilePath}"
+                    android:textColor="@color/color_main_subtitle"
+                    android:textSize="@dimen/item_track_duration_textsize"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@{record.getFormattedDate()}"
+                    android:textColor="@color/color_track_duration"
+                    android:textSize="@dimen/item_track_duration_textsize"
+                    android:textStyle="italic"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/item_track_duration_margin_right"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@{record.getFormattedTime()}"
+                    android:textColor="@color/color_track_duration"
+                    android:textSize="@dimen/item_track_duration_textsize"
+                    android:textStyle="italic"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivMore"
+                android:layout_width="@dimen/item_track_btn_more_size"
+                android:layout_height="@dimen/item_track_btn_more_size"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="@{() -> handler.onClick(ivMore, record)}"
+                android:padding="@dimen/item_track_btn_more_padding"
+                app:srcCompat="@drawable/ic_more"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_track_divider_height"
+            android:layout_gravity="bottom"
+            android:background="@color/color_main_divider"/>
+
+    </FrameLayout>
+
+</layout>

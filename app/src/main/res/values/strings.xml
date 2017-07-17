@@ -1,0 +1,53 @@
+<resources>
+
+    <string name="app_name">Onix Mp3 Recorder</string>
+    <string name="settings">Settings</string>
+
+    <string name="error_recording">Error recording</string>
+    <string name="error_permissions">Please grant storage permission!</string>
+    <string name="error_no_external_player">External player not found, using embedded.</string>
+
+    <string name="start_record">Start recording</string>
+    <string name="stop_record">Stop record</string>
+    <string name="choose_path">Choose path</string>
+    <string name="loading">Loading...</string>
+
+    <string name="settings_saving_path">Select path for saving</string>
+    <string name="settings_setup_id3tags_title">Setup id3 tags</string>
+    <string name="settings_setup_id3tags_subtitle">Change tags for the track record</string>
+    <string name="settings_bitrate">Bitrate</string>
+    <string name="settings_powered_by_lame">Powered by Lame encoder.</string>
+    <string name="settings_powered_by_lame_url">http://lame.sourceforge.net/</string>
+    <string name="settings_powered_by_onix">Create by Onix.</string>
+    <string name="settings_powered_by_onix_url">https://onix-systems.com/</string>
+    <string name="settings_embedded_player">Use embedded player</string>
+
+    <string name="menu_play">Play</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_rename">Rename</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_duration">Sort by duration</string>
+    <string name="menu_alphabetical">Sort by name</string>
+    <string name="menu_date">Sort by date</string>
+
+    <string name="hint_record_file_name">Enter file name</string>
+    <string name="hint_id3tag_title">Title</string>
+    <string name="hint_id3tag_artist">Artist</string>
+    <string name="hint_id3tag_year">Year</string>
+    <string name="hint_id3tag_comment">Comment</string>
+    <string name="hint_search">Search</string>
+
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">CANCEL</string>
+    <string name="dialog_bitrate_title">Choose bitrate</string>
+
+    <string name="id3_tags_default_title">Audio record</string>
+    <string name="id3_tags_default_artist">LameEncoder</string>
+
+    <string name="permission_message_storage">Application need access to storage to save records</string>
+
+    <string name="record_time">Record time: %s</string>
+    <string name="recording">Recording…</string>
+    <string name="record_time_default">Record time: 00:00</string>
+
+</resources>
